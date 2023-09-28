@@ -2,3 +2,16 @@
 cookies.pkl
 # ignore incomplete files
 gatherItems.py
+chrome-win64/117.0.5938.132.manifest
+chrome-win64/chrome.dll
+*.pak
+chrome-win64/chrome.exe
+*.dll
+*.exe
+chrome-win64/MEIPreload/manifest.json
+chrome-win64/First Run
+chrome-win64/icudtl.dat
+chrome-win64/vk_swiftshader_icd.json
+chrome-win64/v8_context_snapshot.bin
+chrome-win64/nacl_irt_x86_64.nexe
+chrome-win64/MEIPreload/preloaded_data.pb

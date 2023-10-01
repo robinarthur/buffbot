@@ -1,5 +1,5 @@
 {
-    "scraper1": [
+    "scraper1-recoil-restricted": [
         "https://buff.163.com/goods/900503",
         "https://buff.163.com/goods/900632",
         "https://buff.163.com/goods/900502",
@@ -11,7 +11,7 @@
         "https://buff.163.com/goods/900606",
         "https://buff.163.com/goods/900491"
     ],
-    "scraper2": [
+    "scraper2-snakebite-milspec": [
         "https://buff.163.com/goods/857543",
         "https://buff.163.com/goods/857579",
         "https://buff.163.com/goods/857583",
@@ -23,7 +23,7 @@
         "https://buff.163.com/goods/857579",
         "https://buff.163.com/goods/857571"
     ],
-    "scraper3": [
+    "scraper3-dreams-restricted": [
         "https://buff.163.com/goods/36420",
         "https://buff.163.com/goods/759227",
         "https://buff.163.com/goods/39491",
@@ -35,7 +35,7 @@
         "https://buff.163.com/goods/886983",
         "https://buff.163.com/goods/886628"
     ],
-    "scraper4": [
+    "scraper4-fracture-restricted": [
         "https://buff.163.com/goods/45283",
         "https://buff.163.com/goods/886976",
         "https://buff.163.com/goods/45367",
@@ -47,7 +47,7 @@
         "https://buff.163.com/goods/763386",
         "https://buff.163.com/goods/857565"
     ],
-    "scraper5": [
+    "scraper5-revolution-milspec": [
         "https://buff.163.com/goods/781605",
         "https://buff.163.com/goods/781612",
         "https://buff.163.com/goods/39801",
@@ -59,7 +59,7 @@
         "https://buff.163.com/goods/921564",
         "https://buff.163.com/goods/921437"
     ],
-    "scraper6": [
+    "scraper6-recoil-milspec": [
         "https://buff.163.com/goods/921510",
         "https://buff.163.com/goods/921434",
         "https://buff.163.com/goods/921512",
@@ -71,7 +71,7 @@
         "https://buff.163.com/goods/900566",
         "https://buff.163.com/goods/900551"
     ],
-    "scraper7": [
+    "scraper7-recoil-milspec": [
         "https://buff.163.com/goods/900611",
         "https://buff.163.com/goods/900522",
         "https://buff.163.com/goods/900530",
@@ -83,7 +83,7 @@
         "https://buff.163.com/goods/900487",
         "https://buff.163.com/goods/900472"
     ],
-    "scraper8": [
+    "scraper8-snakebite-milspec": [
         "https://buff.163.com/goods/900573",
         "https://buff.163.com/goods/886681",
         "https://buff.163.com/goods/886678",
@@ -95,7 +95,7 @@
         "https://buff.163.com/goods/857543",
         "https://buff.163.com/goods/857583"
     ],
-    "scraper9": [
+    "scraper9-snakebite-milspec": [
         "https://buff.163.com/goods/857572",
         "https://buff.163.com/goods/857522",
         "https://buff.163.com/goods/857578",

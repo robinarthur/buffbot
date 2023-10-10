@@ -1,15 +1,12 @@
 {
-    "scraper1-recoil-restricted": [
-        "https://buff.163.com/goods/900503",
-        "https://buff.163.com/goods/900632",
-        "https://buff.163.com/goods/900502",
-        "https://buff.163.com/goods/900610",
-        "https://buff.163.com/goods/900527",
-        "https://buff.163.com/goods/900570",
-        "https://buff.163.com/goods/900617",
-        "https://buff.163.com/goods/900489",
-        "https://buff.163.com/goods/900606",
-        "https://buff.163.com/goods/900491"
+    "scraper1": [
+        "https://buff.163.com/goods/921420",
+        "https://buff.163.com/goods/921427",
+        "https://buff.163.com/goods/921418",
+        "https://buff.163.com/goods/921439",
+        "https://buff.163.com/goods/921421",
+        "https://buff.163.com/goods/921415",
+        "https://buff.163.com/goods/921426"
     ],
     "scraper2-snakebite-milspec": [
         "https://buff.163.com/goods/857543",

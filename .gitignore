@@ -15,3 +15,6 @@ chrome-win64/vk_swiftshader_icd.json
 chrome-win64/v8_context_snapshot.bin
 chrome-win64/nacl_irt_x86_64.nexe
 chrome-win64/MEIPreload/preloaded_data.pb
+__pycache__/executeOrder.cpython-39.pyc
+chromedriver/chromedriver
+chromedriver/LICENSE.chromedriver

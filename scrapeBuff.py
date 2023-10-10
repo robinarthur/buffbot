@@ -21,7 +21,9 @@ def notify(title, text):
               osascript -e 'display notification "{}" with title "{}"'
               """.format(text, title))
 
-def obtainItems(request, driver, maximumFloat): # obtain list of 10 items wear values and prices for the links found in json file. Returns true if match is found
+
+
+def obtainItems(request, driver, maximumFloat, maximumPrice): # obtain list of 10 items wear values and prices for the links found in json file. Returns true if match is found
 
     driver.get(request) # driver configs
     cookies = pickle.load(open("cookies.pkl", "rb")) # enable cookies
@@ -46,47 +48,59 @@ def obtainItems(request, driver, maximumFloat): # obtain list of 10 items wear v
         print(price.text)
         print("Float:", weartext,"\n")
         print(threading.active_count())
-        if weartext < maximumFloat:
+        if weartext < maximumFloat and price <= maximumPrice:
             notify("Buff Scraper", "An item has been found that matches your criteria: {} {} \n{}"
                    .format(driver.find_element(By.XPATH, '/html/body/div[7]/div/div[1]/div[2]/div[1]/h1').text if isNamed else 'Unknown Name', "Listing {}".format(i+1), "Float: {}".format(weartext)))
             purchase(driver, i)
     driver.quit
 
+
+
 class ScrapeThread(threading.Thread):
-    def __init__(self, scrapernumber, maximumFloat):
+    def __init__(self, scrapernumber, maximumFloat, maximumPrice):
         threading.Thread.__init__(self)
         self.scrapernumber = scrapernumber
         self.maximumFloat = maximumFloat
+        self.maximumPrice = maximumPrice
     def run(self):
         scrapeCount = 'scraper' + str(self.scrapernumber)
         while True:
             for link in data[scrapeCount]:
                 options = webdriver.ChromeOptions()
                 options.add_argument('--headless')
-                driver = webdriver.Chrome(options=options)
-                obtainItems(link, driver, self.maximumFloat)
+                
+                #driver = webdriver.Chrome(executable_path='/home/roy/Dokumente/GitHub/buffbot/chromedriver/chromedriver', options=options)
+                #link = 'https://www.google.com'
 
-def scrape(firstScraper, lastScraper, maximumFloat):
+                driver = webdriver.Chrome(executable_path='/home/roy/Dokumente/GitHub/buffbot/chromedriver/chromedriver', options=options)
+                obtainItems(link, driver, self.maximumFloat, self.maximumPrice)
+
+
+
+def scrape(firstScraper, lastScraper, maximumFloat, maximumPrice):
     threads = []
 
     for scrapeNum in range(firstScraper, lastScraper+1):
-        t = ScrapeThread(scrapeNum, maximumFloat)
+        t = ScrapeThread(scrapeNum, maximumFloat, maximumPrice)
         t.start()
         threads.append(t)
     
     for t in threads:
         t.join()
 
+
+
+
 f = open('./buff.json')
 data = json.load(f)
 
-if len(sys.argv) != 4:
+if len(sys.argv) != 5:
     print('Please enter the correct number of arguments')
     pass
 else:
-    scrape(int(sys.argv[1]), int(sys.argv[2]), float(sys.argv[3]))
+    scrape(int(sys.argv[1]), int(sys.argv[2]), float(sys.argv[3]), float(sys.argv[4]))
 
 # Note: if you want an example of a function run, uncomment this:
-# scrape(1, 4, 0.10)
+# scrape(1, 4, 0.19, 0.12)
 
 # add readme.md

@@ -69,10 +69,7 @@ class ScrapeThread(threading.Thread):
                 options = webdriver.ChromeOptions()
                 options.add_argument('--headless')
                 
-                #driver = webdriver.Chrome(executable_path='/home/roy/Dokumente/GitHub/buffbot/chromedriver/chromedriver', options=options)
-                #link = 'https://www.google.com'
-
-                driver = webdriver.Chrome(executable_path='/home/roy/Dokumente/GitHub/buffbot/chromedriver/chromedriver', options=options)
+                driver = webdriver.Chrome(executable_path='./chromedriver/chromedriver', options=options)
                 obtainItems(link, driver, self.maximumFloat, self.maximumPrice)
 
 
